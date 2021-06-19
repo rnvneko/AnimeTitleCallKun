@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ表示くん（仮）</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <h2>西暦年とクールを指定するとその時期のアニメタイトルが羅列されます。</h2>
+    <form method="post">
+        <p>西暦（半角数字4桁）</p>
+        <input name="year">
+        <p>クール</p>
+        <select name="cours">
+            <option value="1">冬（1～3月）</option>
+            <option value="2">春（4～6月）</option>
+            <option value="3">夏（7～9月）</option>
+            <option value="4">秋（10～12月）</option>
+            <option value="5">通年</option>
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+    {% if error is defined %}
+    {{error}}
+    {% endif %}
+
+    {% if result is defined %}
+    <h2>結果</h2>
+    <p>合計作品数：{{ result | length }}</p>
+    {% for id in result %}
+    <p>{{ loop.index }}：{{ id["title"] }}</p>
+    <p>================================</p>
+    {% endfor %}
+    {% endif %}
+
+</body>
+</html>
