@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     name = "who"
     # return name
-    return render_template('index.html', title='アニメ表示くんべーた')
+    return render_template('index.html', title='アニメタイトル表示くんべーた')
 
 
 @app.route('/', methods=["POST"])
@@ -17,11 +17,11 @@ def post():
     cours = request.form.get("cours")
 
     if year == "":
-        return render_template('index.html', title='アニメ表示くんべーた', error="正しい西暦年を入力してね")
+        return render_template('index.html', title='アニメタイトル表示くんべーた', error="正しい西暦年を入力してね")
 
     result = titlecall(year, cours)
     print(result)
-    return render_template('index.html', title='アニメリスト', result=result)
+    return render_template('index.html', title='アニメタイトル表示くんべーた', result=result)
 
 
 if __name__ == "__main__":

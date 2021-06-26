@@ -1,0 +1,39 @@
+.container {
+margin-top: 100px;
+font-family: "メイリオ";
+}
+
+h1 {
+padding-left: 15px;
+border-left: 4px solid #2f96ff;
+}
+
+h2 {
+border-left: 4px solid #2f96ff;
+margin: 30px 0px 30px 0px;
+padding-left: 15px;
+font-weight: bold;
+}
+
+h3 {
+padding: 20px 0px;
+}
+
+.title {
+font-weight: bold;
+}
+
+.footer {
+margin: 15px 0px;
+text-align: right;
+}
+
+.result {
+font-weight: bold;
+font-size: 20px;
+}
+
+.card {
+margin: 10px;
+}
+
